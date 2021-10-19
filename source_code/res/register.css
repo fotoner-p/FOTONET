@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nanum Square';
+}
+body {
+    background: #4b4064;
+    font-size: 16px;
+}
+
+section#sect1 {
+    padding-top: 55px;
+    max-height: 1080px;
+    min-width: 320px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size:10vw;
+}
+#sect1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.login_container {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+input.email, input.psw, input.nickname, input.repsw {
+    margin-bottom: 20px;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+input.email, input.nickname, input.psw, input.repsw, button.signupBtn, div.option_container{
+    width: 85vw;
+    min-width: 260px;
+    max-width: 500px;
+    height: 70px;
+}
+
+button.signupBtn {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    background-color: #7e6ca8;
+    color: white;
+    cursor: pointer;
+}
+button.signupBtn:hover {
+    background-color: #b1a6ca;
+}
+
+input.email[type=email], input.nickname[type=text], input.psw[type=password], input.repsw[type=password], button.signupBtn {
+    font-size: 22px;
+}
+
+#error{
+    color:red;
+}

@@ -1,0 +1,10 @@
+Create table tblboard (
+   num int(4) not null primary key,
+   name varchar(10) null,
+   pass varchar(10) null,
+   email varchar(20) null,
+   title varchar(30) null,
+   contents text(16) null,
+   writedate varchar(20) null,
+   readcount int(4) null
+);

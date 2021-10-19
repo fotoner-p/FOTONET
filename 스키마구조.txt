@@ -1,0 +1,39 @@
+
+create table user_table
+(
+    user_UID  int auto_increment
+        primary key,
+    email     varchar(255) not null,
+    user_name varchar(32)  not null,
+    user_pw   varchar(30)  not null,
+    created   varchar(20)  not null
+)charset = utf8;
+
+create table doc_table
+(
+    doc_UID   int auto_increment
+        primary key,
+    user_UID  int                        not null,
+    doc_title varchar(255)               not null,
+    doc_type  int(4)                     not null,
+    doc_count int(11) unsigned default 0 not null,
+    doc_main  text                       not null,
+    created   varchar(20)                not null,
+    constraint doc_table_user_table_user_UID_fk
+        foreign key (user_UID) references user_table (user_UID)
+)charset = utf8;
+
+create table comment_table
+(
+    comment_UID  int(10) auto_increment
+        primary key,
+    user_UID     int(10)      not null,
+    doc_UID      int(10)      not null,
+    created      varchar(20)  not null,
+    comment_main varchar(200) not null,
+    constraint comment_table_doc_table_doc_UID_fk
+        foreign key (doc_UID) references doc_table (doc_UID),
+    constraint comment_table_user_table_user_UID_fk
+        foreign key (user_UID) references user_table (user_UID)
+)charset = utf8;
+
